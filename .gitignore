@@ -1,0 +1,6 @@
+.classpath
+*.swp
+.settings
+*.class
+bin/
+data/
