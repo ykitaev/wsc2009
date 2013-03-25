@@ -43,6 +43,18 @@ public class Concept
     return mRelatedInstances;
   }
   
+  public void setParent(Concept iConcept)
+  {
+    mParent = iConcept;
+  }
+  
+  public Concept getParent()
+  {
+    return mParent;
+  }
+  
+  private Concept mParent = null;
+  
   private String mName;
   
   private Set<String> mRelatedInstances;
