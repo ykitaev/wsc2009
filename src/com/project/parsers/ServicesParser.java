@@ -1,9 +1,6 @@
 package com.project.parsers;
 
-import java.io.BufferedWriter;
 import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.FileWriter;
 import java.util.HashMap;
 
 import javax.xml.parsers.DocumentBuilder;

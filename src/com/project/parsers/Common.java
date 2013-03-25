@@ -28,7 +28,6 @@ public class Common
     DataInputStream wInputStream = null;
     StringBuilder contents = null;
     String wLine; 
-    char c; 
     
     try
     {
