@@ -49,4 +49,13 @@ public class Service
   {
     return mOutputs.containsAll(iOutputs);
   }
+
+  /**
+   * Get the name of the service
+   * @return
+   */
+  public String getName()
+  {
+    return mServiceName;
+  }
 }

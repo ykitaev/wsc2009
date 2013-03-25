@@ -1,6 +1,9 @@
 package com.project.parsers;
 
+import java.io.BufferedWriter;
 import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.FileWriter;
 import java.util.HashMap;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -30,7 +33,7 @@ public class ServicesParser
     Document doc = null;
     DocumentBuilderFactory fact = DocumentBuilderFactory.newInstance();
     DocumentBuilder docBuilder = null; 
-    NodeList nodes = null; 
+    NodeList nodes = null;
     
     try 
     {
@@ -38,41 +41,41 @@ public class ServicesParser
       doc = docBuilder.parse(new ByteArrayInputStream(iXMLContents.getBytes()));
       nodes = doc.getElementsByTagName("service");
       
+      /* Iterate through SERVICES */
       for (int i=0; i < nodes.getLength(); ++i)
       {
+        Service  service = null;
         NodeList children;
         NodeList inputList;
         NodeList outputList;
         
         children = nodes.item(i).getChildNodes(); 
         
-        System.out.println(nodes.item(i).getAttributes().getNamedItem("name")
-            .getNodeValue());
+        service = new Service(nodes.item(i).getAttributes()
+            .getNamedItem("name").getNodeValue());
         
-        System.out.println(" Inputs");
         /* 0 is for inputs */
         inputList = children.item(0).getChildNodes();
         for (int j=0; j < inputList.getLength(); ++j)
         {
-           System.out.println("\t" + inputList.item(j).getAttributes()
-             .getNamedItem("name").getNodeValue());
+           service.addInService(inputList.item(j).getAttributes()
+               .getNamedItem("name").getNodeValue());
         }
         
-        System.out.println(" Outputs");
         /* 1 is for outputs */ 
         outputList = children.item(1).getChildNodes();
         for (int j=0; j < outputList.getLength(); ++j)
         {
-          System.out.println("\t" + outputList.item(j).getAttributes()
-            .getNamedItem("name").getNodeValue());
+          service.addOutService(outputList.item(j).getAttributes()
+            .getNamedItem("name").getNodeValue() + "\n");
         }
         
+        mServices.put(service.getName(), service);
       }
     }
     catch(Exception e)
     {
       e.printStackTrace();
-    }
-    
+    }    
   }
 }

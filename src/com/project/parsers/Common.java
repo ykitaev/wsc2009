@@ -1,9 +1,11 @@
 package com.project.parsers;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileWriter;
 import java.io.InputStreamReader;
 
 /**
@@ -48,5 +50,27 @@ public class Common
     }
         
     return contents.toString();
+  }
+  
+  /**
+   * Use this if you want to output some (extensive) debug info into a file
+   * @param iFilename
+   * @param Contents
+   */
+  public static void writeOut(String iFilename, String iContents)
+  {
+    File wFile = new File(iFilename);
+    BufferedWriter bw = null;
+        
+    try
+    {
+      bw = new BufferedWriter(new FileWriter(wFile));
+      bw.write(iContents);
+      bw.close();
+    }
+    catch(Exception e)
+    {
+      e.printStackTrace();
+    }
   }
 }
