@@ -1,9 +1,9 @@
 package com.project;
 
 import com.project.parsers.ChallengeParser;
-import com.project.parsers.Common;
 import com.project.parsers.ServicesParser;
 import com.project.parsers.TaxonomyParser;
+import com.project.presentation.MainGUI;
 
 public class Main
 {
@@ -15,9 +15,13 @@ public class Main
     TaxonomyParser tp = new TaxonomyParser();
     ChallengeParser cp = new ChallengeParser();
     
+    MainGUI guigui = new MainGUI();
+    guigui.setVisible(true);
+    
+    /*
     sp.parse(Common.getFileContentsAsString(mTestSetPath + mServicesFilename));
     tp.parse(Common.getFileContentsAsString(mTestSetPath + mTaxonomyFilename));
-    cp.parse(Common.getFileContentsAsString(mTestSetPath + mProblemFilename));
+    cp.parse(Common.getFileContentsAsString(mTestSetPath + mProblemFilename)); */
   }
   
   /**
