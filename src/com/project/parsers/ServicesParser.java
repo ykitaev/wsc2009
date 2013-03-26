@@ -64,7 +64,7 @@ public class ServicesParser
         for (int j=0; j < outputList.getLength(); ++j)
         {
           service.addOutService(outputList.item(j).getAttributes()
-            .getNamedItem("name").getNodeValue() + "\n");
+            .getNamedItem("name").getNodeValue());
         }
         
         mServices.put(service.getName(), service);

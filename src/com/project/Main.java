@@ -1,5 +1,6 @@
 package com.project;
 
+import com.project.parsers.ChallengeParser;
 import com.project.parsers.Common;
 import com.project.parsers.ServicesParser;
 import com.project.parsers.TaxonomyParser;
@@ -12,9 +13,11 @@ public class Main
     System.out.println("WSC 2009 Class project");
     ServicesParser sp = new ServicesParser();
     TaxonomyParser tp = new TaxonomyParser();
+    ChallengeParser cp = new ChallengeParser();
     
     sp.parse(Common.getFileContentsAsString(mTestSetPath + mServicesFilename));
     tp.parse(Common.getFileContentsAsString(mTestSetPath + mTaxonomyFilename));
+    cp.parse(Common.getFileContentsAsString(mTestSetPath + mProblemFilename));
   }
   
   /**
@@ -28,5 +31,7 @@ public class Main
   private static final String mTaxonomyFilename = "taxonomy.xml";
   
   private static final String mServicesFilename = "services.xml";
+  
+  private static final String mProblemFilename = "problem.xml";
   
 }
