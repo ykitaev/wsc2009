@@ -10,6 +10,7 @@ import java.util.HashMap;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JScrollPane;
@@ -91,28 +92,44 @@ public class MainGUI extends JFrame
     mSolutionCombo = new JComboBox<String>(items);
   }
 
+  private String getAbsoluteFilePathFromFileChooser()
+  {
+    JFileChooser wFileChooser = new JFileChooser();
+    String wFilename = null;
+    
+    if (wFileChooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION)
+    {
+      wFilename = wFileChooser.getSelectedFile().getAbsolutePath();
+    }
+    
+    return wFilename;
+  }
+  
   private void callButtonParseChallenge()
   {
     // TODO
-    System.out.println("Call parse challenge");
+    System.out.println("Call parse challenge :" 
+      + getAbsoluteFilePathFromFileChooser());
   }
   
   private void callButtonParseTaxonomy()
   {
     // TODO
-    System.out.println("Call parse taxonomy");
+    System.out.println("Call parse taxonomy : "
+        + getAbsoluteFilePathFromFileChooser());
   }
   
   private void callButtonParseServices()
   {
     // TODO
-    System.out.println("Call Button Parse services");
+    System.out.println("Call Button Parse services :"
+        + getAbsoluteFilePathFromFileChooser());
   }
   
   private void callButtonDoIt()
   {
     // TODO
-    System.out.println("Call Button Do It");
+    System.out.println("Call Button Do It : ");
   }
   
   private void callButtonStop()
@@ -125,7 +142,7 @@ public class MainGUI extends JFrame
   {
     mButtonDoIt
       .addActionListener(mActionListeners.get("BUTTON_DO_IT"));
-    mButtonParseChallenge
+    mButtonParseChallenge     
       .addActionListener(mActionListeners.get("BUTTON_PARSE_CHALLENGE"));
     mButtonParseServices
       .addActionListener(mActionListeners.get("BUTTON_PARSE_SERVICES"));
