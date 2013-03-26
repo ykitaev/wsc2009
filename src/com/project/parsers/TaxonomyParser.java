@@ -35,7 +35,8 @@ public class TaxonomyParser
     {
       docBuilder =  fact.newDocumentBuilder();
       doc = docBuilder.parse(new ByteArrayInputStream(iXMLContents.getBytes()));
-      
+      nodes = doc.getElementsByTagName("concept");
+      System.out.println(nodes.getLength());
     }
     catch(Exception e)
     {
