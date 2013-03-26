@@ -3,7 +3,10 @@ package com.project.presentation;
 import java.awt.Component;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -19,23 +22,6 @@ import javax.swing.JTextArea;
  */
 public class MainGUI extends JFrame
 {
-  protected JButton mButtonParseTaxonomy = new JButton("Parse Taxonomy");
-  protected JButton mButtonParseChallenge = new JButton("Parse Challenge");
-  protected JButton mButtonDoIt = new JButton("Do it...");
-  protected JButton mButtonParseServices = new JButton("Parse Services");
-  protected JButton mButtonStop = new JButton("Stop");
-  protected JTextArea mTextOutput = new JTextArea(16,58);
-  protected JScrollPane mTextScroll = new JScrollPane(mTextOutput);
-  /* From 1 -> 10 */
-  protected JLabel mListLabel = new JLabel("Parallelism");
-  protected JComboBox<String> mListBranching = null;
-  
-  protected JLabel mSolutionLabel = new JLabel("Num of solutions:");
-  protected JComboBox<String> mSolutionCombo = null;
-  
-  protected GridBagLayout mLayout = new GridBagLayout();
-  protected GridBagConstraints mGBConstraints = new GridBagConstraints();
-  
   
   public MainGUI()
   {
@@ -84,6 +70,8 @@ public class MainGUI extends JFrame
   {
     initListBranchingComponent();
     initSolutionComboComponent();
+    initActionListeners();
+    initBindButtonsToActionListeners();
   }
   
   /**
@@ -102,5 +90,106 @@ public class MainGUI extends JFrame
     for(int i = 0; i < 10; items[i] = "" + (++i));
     mSolutionCombo = new JComboBox<String>(items);
   }
+
+  private void callButtonParseChallenge()
+  {
+    // TODO
+    System.out.println("Call parse challenge");
+  }
   
+  private void callButtonParseTaxonomy()
+  {
+    // TODO
+    System.out.println("Call parse taxonomy");
+  }
+  
+  private void callButtonParseServices()
+  {
+    // TODO
+    System.out.println("Call Button Parse services");
+  }
+  
+  private void callButtonDoIt()
+  {
+    // TODO
+    System.out.println("Call Button Do It");
+  }
+  
+  private void callButtonStop()
+  {
+    // TODO
+    System.out.println("Call Button Stop");
+  }
+  
+  private void initBindButtonsToActionListeners()
+  {
+    mButtonDoIt
+      .addActionListener(mActionListeners.get("BUTTON_DO_IT"));
+    mButtonParseChallenge
+      .addActionListener(mActionListeners.get("BUTTON_PARSE_CHALLENGE"));
+    mButtonParseServices
+      .addActionListener(mActionListeners.get("BUTTON_PARSE_SERVICES"));
+    mButtonParseTaxonomy
+      .addActionListener(mActionListeners.get("BUTTON_PARSE_TAXONOMY"));
+    mButtonStop
+      .addActionListener(mActionListeners.get("BUTTON_STOP"));
+  }
+  
+  private void initActionListeners()
+  {
+    mActionListeners.put("BUTTON_PARSE_CHALLENGE", 
+      new ActionListener(){
+      public void actionPerformed(ActionEvent iActionEvent)
+      {
+        callButtonParseChallenge();
+      }});
+    
+    mActionListeners.put("BUTTON_PARSE_SERVICES",
+      new ActionListener(){
+      public void actionPerformed(ActionEvent iActionEvent)
+      {
+        callButtonParseServices();
+      }});
+    
+    mActionListeners.put("BUTTON_PARSE_TAXONOMY", 
+      new ActionListener(){
+      public void actionPerformed(ActionEvent iActionEvent)
+      {
+        callButtonParseTaxonomy();
+      }});
+    
+    mActionListeners.put("BUTTON_DO_IT", 
+      new ActionListener(){
+      public void actionPerformed(ActionEvent iActionEvent)
+      {
+        callButtonDoIt();
+      }});
+    
+    mActionListeners.put("BUTTON_STOP",
+      new ActionListener(){
+      public void actionPerformed(ActionEvent iActionEvent)
+      {
+        callButtonStop();
+      }});
+  }
+  
+  protected HashMap<String,ActionListener> mActionListeners = 
+      new HashMap<String,ActionListener>();
+  protected JButton mButtonParseTaxonomy = new JButton("Parse Taxonomy");
+  protected JButton mButtonParseChallenge = new JButton("Parse Challenge");
+  protected JButton mButtonDoIt = new JButton("Do it...");
+  protected JButton mButtonParseServices = new JButton("Parse Services");
+  protected JButton mButtonStop = new JButton("Stop");
+  protected JTextArea mTextOutput = new JTextArea(16,58);
+  protected JScrollPane mTextScroll = new JScrollPane(mTextOutput);
+  /* From 1 -> 10 */
+  protected JLabel mListLabel = new JLabel("Parallelism");
+  protected JComboBox<String> mListBranching = null;
+  
+  protected JLabel mSolutionLabel = new JLabel("Num of solutions:");
+  protected JComboBox<String> mSolutionCombo = null;
+  
+  protected GridBagLayout mLayout = new GridBagLayout();
+  protected GridBagConstraints mGBConstraints = new GridBagConstraints();
+
 }
