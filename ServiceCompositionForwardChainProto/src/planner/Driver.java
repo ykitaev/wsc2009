@@ -55,7 +55,7 @@ public class Driver {
 		
 		int maxDepth = 1;
 		
-		HashSet<Integer> solutionHashes = new HashSet<Integer>();
+		HashSet<Long> solutionHashes = new HashSet<Long>();
 		
 		int solutionsWanted = slnWanted;
 		int parallelFactor = prl;
@@ -82,7 +82,7 @@ public class Driver {
 				return;
 			}
 			
-			int lastSolutionHash = ForwardChainReasoningPlanner.getSolutionHash(route, parallelFactor);
+			long lastSolutionHash = ForwardChainReasoningPlanner.getSolutionHash(route, parallelFactor);
 			solutionHashes.add(lastSolutionHash);
 			
 			// Output the results:

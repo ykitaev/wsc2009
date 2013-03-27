@@ -28,8 +28,8 @@ public class ForwardChainReasoningPlanner
 			, ArrayList<? extends Action> actions
 			, int currentLevel
 			, int maxDepth
-			, HashSet<Integer> knownSolutionHashes
-			, int partialSolutionHash
+			, HashSet<Long> knownSolutionHashes
+			, long partialSolutionHash
 			, int parallelFactor)
 	{
 		if (!active)
@@ -109,14 +109,14 @@ public class ForwardChainReasoningPlanner
 					availableForNextLevel.add(action);
 			
 			 // compute the partial hash
-			int hash = partialSolutionHash;
+			long hash = partialSolutionHash;
 			for (int k = 0; k < parallelActions.size(); ++k)
 			{
-				Action action = parallelActions.get(k);
 				// Keep the position the same for hashing to tell the algorithm
 				// that switching actions around which are done in parallel
 				// does not give us a new solution and more search is required
-				hash += getActionHash(action, currentLevel-1);
+				Action action = parallelActions.get(k);
+				hash += getActionHash(action, currentLevel);
 			}
 			
 			// Recursive call. Gets the remaining part of the solution
@@ -160,11 +160,11 @@ public class ForwardChainReasoningPlanner
 	 * @param solution The ArrayList of actions
 	 * @return Customly-generated hash-code
 	 */
-	public static int getSolutionHash(ArrayList<? extends Action> solution, int degreeOfParallelism)
+	public static long getSolutionHash(ArrayList<? extends Action> solution, int degreeOfParallelism)
 	{
-		int hash = 0;
+		long hash = 0;
 		for (int i = 0; i < solution.size(); ++i)
-			hash += getActionHash(solution.get(i), i/degreeOfParallelism);
+			hash += getActionHash(solution.get(i), i/degreeOfParallelism+1);
 		
 		return hash;
 	}
@@ -175,11 +175,11 @@ public class ForwardChainReasoningPlanner
 	 * @param pos Position. 0 based!
 	 * @return The custom hash-code
 	 */
-	private static int getActionHash(Action a, int pos)
+	private static long getActionHash(Action a, int pos)
 	{
 		if (null == a)
 			return 0;
 		
-		return ((pos+1) * a.hashCode()) % 4194304;
+		return (pos * a.hashCode()) % 4194304;
 	}
 }
