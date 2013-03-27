@@ -180,6 +180,6 @@ public class ForwardChainReasoningPlanner
 		if (null == a)
 			return 0;
 		
-		return (pos * a.hashCode()) % 4194304;
+		return (a.hashCode()) % 4194304;
 	}
 }
