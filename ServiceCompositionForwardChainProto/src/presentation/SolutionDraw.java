@@ -60,6 +60,7 @@ public class SolutionDraw extends JDialog{
     	 for (int i = 0; i < solution.size(); ++i)
     	 {
     		 int x = hoffset + i * steph;
+    		 int starty = voffset;
     		 lastx = x;
     		 ParallelActionPack p = solution.get(i);
     		 int lasty = 0;
@@ -69,9 +70,11 @@ public class SolutionDraw extends JDialog{
     			 ssf.applyActionWithExpansion(a);
     			 int y = voffset + j * stepv;
     			 g.drawString(a.toString(), x, y);
-    			 g.drawRect(x-(stepv-rech)/2, y-rech+10, recw, rech);
+    			
     			 lasty = y;
     		 }
+    		 
+    		 g.drawRect(x-(stepv-rech)/2, starty-rech, recw, lasty-starty+rech+10);
     		 
     		 int y = lasty + 30;
  
