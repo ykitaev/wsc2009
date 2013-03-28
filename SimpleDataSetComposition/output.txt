@@ -1,0 +1,222 @@
+WARNING!
+THE FULL VERSION OF THE ALGORITHM IS IN ANOTHER PROJECT. 
+This project only runs the sample data from the project description. 
+Please run to the PlannerFull project to test the algorithm on the actual challenge files.
+Loading challenge...
+Parsing services...
+Input concepts: A, B, C.
+Goal concepts: D.
+
+Attempting search with maxDepth=1
+
+************Level 1***************** 
+State at this level: A, B, C.
+Applicable services: W1, W2.
+Number of services : 2
+
+************Level 2***************** 
+State at this level: A, B, C, J.
+Applicable services: W2.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+************Level 2***************** 
+State at this level: E, F, A, B, C.
+Applicable services: W1, W3, W4.
+Number of services : 3
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Solution not possible with depth 1
+
+Attempting search with maxDepth=2
+
+************Level 1***************** 
+State at this level: A, B, C.
+Applicable services: W1, W2.
+Number of services : 2
+
+************Level 2***************** 
+State at this level: A, B, C, J.
+Applicable services: W2.
+Number of services : 1
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, J.
+Applicable services: W3, W4.
+Number of services : 2
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 2***************** 
+State at this level: E, F, A, B, C.
+Applicable services: W1, W3, W4.
+Number of services : 3
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, J.
+Applicable services: W3, W4.
+Number of services : 2
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, H.
+Applicable services: W1, W4, W7.
+Number of services : 3
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 3***************** 
+State at this level: E, F, G, A, B, C.
+Applicable services: W1, W3, W8.
+Number of services : 3
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Solution not possible with depth 2
+
+Attempting search with maxDepth=3
+
+************Level 1***************** 
+State at this level: A, B, C.
+Applicable services: W1, W2.
+Number of services : 2
+
+************Level 2***************** 
+State at this level: A, B, C, J.
+Applicable services: W2.
+Number of services : 1
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, J.
+Applicable services: W3, W4.
+Number of services : 2
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, J.
+Applicable services: W3, W8.
+Number of services : 2
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 2***************** 
+State at this level: E, F, A, B, C.
+Applicable services: W1, W3, W4.
+Number of services : 3
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, J.
+Applicable services: W3, W4.
+Number of services : 2
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, J.
+Applicable services: W3, W8.
+Number of services : 2
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, H.
+Applicable services: W1, W4, W7.
+Number of services : 3
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, H.
+Applicable services: W1, W7.
+Number of services : 2
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+6199452 is not in [], returning solution.
+Backtrack: goal state has been reached!
+Backtrack with : [W7]
+Backtrack with : [W3, W7]
+
+Solution #1 found with maxDepth=3: 
+W2, W3, W7.
