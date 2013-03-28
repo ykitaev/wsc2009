@@ -1,13 +1,6 @@
 package serviceparser;
 
-import java.io.ByteArrayInputStream;
 import java.util.ArrayList;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.NodeList;
 
 import planner.DataType;
 import planner.WebService;

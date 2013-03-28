@@ -1,16 +1,10 @@
 package planner;
 import java.util.ArrayList;
 import java.util.HashSet;
-
 import presentation.MainGUI;
-
 import auxparsers.ChallengeParser;
-
 import serviceparser.ServiceParser;
-
 import conceptparser.ConceptInstanceMap;
-import conceptparser.OwlParser;
-
 
 public class Driver {
 
