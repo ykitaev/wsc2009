@@ -220,3 +220,2453 @@ Backtrack with : [W3, W7]
 
 Solution #1 found with maxDepth=3: 
 W2, W3, W7.
+WARNING!
+THE FULL VERSION OF THE ALGORITHM IS IN ANOTHER PROJECT. 
+This project only runs the sample data from the project description. 
+Please run to the PlannerFull project to test the algorithm on the actual challenge files.
+WARNING!
+THE FULL VERSION OF THE ALGORITHM IS IN ANOTHER PROJECT. 
+This project only runs the sample data from the project description. 
+Please run to the PlannerFull project to test the algorithm on the actual challenge files.
+Loading challenge...
+Parsing services...
+Input concepts: A, B, C.
+Goal concepts: D.
+
+Attempting search with maxDepth=1
+
+************Level 1***************** 
+State at this level: A, B, C.
+Applicable services: W1, W2.
+Number of services : 2
+
+************Level 2***************** 
+State at this level: A, B, C, J.
+Applicable services: W2.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+************Level 2***************** 
+State at this level: E, F, A, B, C.
+Applicable services: W1, W3, W4.
+Number of services : 3
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Solution not possible with depth 1
+
+Attempting search with maxDepth=2
+
+************Level 1***************** 
+State at this level: A, B, C.
+Applicable services: W1, W2.
+Number of services : 2
+
+************Level 2***************** 
+State at this level: A, B, C, J.
+Applicable services: W2.
+Number of services : 1
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, J.
+Applicable services: W3, W4.
+Number of services : 2
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 2***************** 
+State at this level: E, F, A, B, C.
+Applicable services: W1, W3, W4.
+Number of services : 3
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, J.
+Applicable services: W3, W4.
+Number of services : 2
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, H.
+Applicable services: W1, W4, W7.
+Number of services : 3
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 3***************** 
+State at this level: E, F, G, A, B, C.
+Applicable services: W1, W3, W8.
+Number of services : 3
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Solution not possible with depth 2
+
+Attempting search with maxDepth=3
+
+************Level 1***************** 
+State at this level: A, B, C.
+Applicable services: W1, W2.
+Number of services : 2
+
+************Level 2***************** 
+State at this level: A, B, C, J.
+Applicable services: W2.
+Number of services : 1
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, J.
+Applicable services: W3, W4.
+Number of services : 2
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, J.
+Applicable services: W3, W8.
+Number of services : 2
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 2***************** 
+State at this level: E, F, A, B, C.
+Applicable services: W1, W3, W4.
+Number of services : 3
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, J.
+Applicable services: W3, W4.
+Number of services : 2
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, J.
+Applicable services: W3, W8.
+Number of services : 2
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, H.
+Applicable services: W1, W4, W7.
+Number of services : 3
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, H.
+Applicable services: W1, W7.
+Number of services : 2
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+7950272 is not in [], returning solution.
+Backtrack: goal state has been reached!
+Backtrack with : [W7]
+Backtrack with : [W3, W7]
+
+Solution #1 found with maxDepth=3: 
+W2, W3, W7.
+Attempting search with maxDepth=3
+
+************Level 1***************** 
+State at this level: A, B, C.
+Applicable services: W1, W2.
+Number of services : 2
+
+************Level 2***************** 
+State at this level: A, B, C, J.
+Applicable services: W2.
+Number of services : 1
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, J.
+Applicable services: W3, W4.
+Number of services : 2
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, J.
+Applicable services: W3, W8.
+Number of services : 2
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 2***************** 
+State at this level: E, F, A, B, C.
+Applicable services: W1, W3, W4.
+Number of services : 3
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, J.
+Applicable services: W3, W4.
+Number of services : 2
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, J.
+Applicable services: W3, W8.
+Number of services : 2
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, H.
+Applicable services: W1, W4, W7.
+Number of services : 3
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, H.
+Applicable services: W1, W7.
+Number of services : 2
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+7950272 is already in [7950272], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 3***************** 
+State at this level: E, F, G, A, B, C.
+Applicable services: W1, W3, W8.
+Number of services : 3
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, J.
+Applicable services: W3, W8.
+Number of services : 2
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, H.
+Applicable services: W1, W7.
+Number of services : 2
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, H.
+Applicable services: W1, W7.
+Number of services : 2
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Solution not possible with depth 3
+
+Attempting search with maxDepth=4
+
+************Level 1***************** 
+State at this level: A, B, C.
+Applicable services: W1, W2.
+Number of services : 2
+
+************Level 2***************** 
+State at this level: A, B, C, J.
+Applicable services: W2.
+Number of services : 1
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, J.
+Applicable services: W3, W4.
+Number of services : 2
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+12029911 is not in [7950272], returning solution.
+Backtrack: goal state has been reached!
+Backtrack with : [W7]
+Backtrack with : [W3, W7]
+Backtrack with : [W2, W3, W7]
+
+Solution #2 found with maxDepth=4: 
+W1, W2, W3, W7.
+Attempting search with maxDepth=4
+
+************Level 1***************** 
+State at this level: A, B, C.
+Applicable services: W1, W2.
+Number of services : 2
+
+************Level 2***************** 
+State at this level: A, B, C, J.
+Applicable services: W2.
+Number of services : 1
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, J.
+Applicable services: W3, W4.
+Number of services : 2
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+12029911 is already in [7950272, 12029911], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, J.
+Applicable services: W3, W8.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 2***************** 
+State at this level: E, F, A, B, C.
+Applicable services: W1, W3, W4.
+Number of services : 3
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, J.
+Applicable services: W3, W4.
+Number of services : 2
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+12029911 is already in [7950272, 12029911], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, J.
+Applicable services: W3, W8.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, H.
+Applicable services: W1, W4, W7.
+Number of services : 3
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+12029911 is already in [7950272, 12029911], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, H.
+Applicable services: W1, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+10264549 is not in [7950272, 12029911], returning solution.
+Backtrack: goal state has been reached!
+Backtrack with : [W7]
+Backtrack with : [W4, W7]
+Backtrack with : [W3, W4, W7]
+
+Solution #3 found with maxDepth=4: 
+W2, W3, W4, W7.
+Attempting search with maxDepth=4
+
+************Level 1***************** 
+State at this level: A, B, C.
+Applicable services: W1, W2.
+Number of services : 2
+
+************Level 2***************** 
+State at this level: A, B, C, J.
+Applicable services: W2.
+Number of services : 1
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, J.
+Applicable services: W3, W4.
+Number of services : 2
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+12029911 is already in [7950272, 12029911, 10264549], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, J.
+Applicable services: W3, W8.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 2***************** 
+State at this level: E, F, A, B, C.
+Applicable services: W1, W3, W4.
+Number of services : 3
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, J.
+Applicable services: W3, W4.
+Number of services : 2
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+12029911 is already in [7950272, 12029911, 10264549], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, J.
+Applicable services: W3, W8.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, H.
+Applicable services: W1, W4, W7.
+Number of services : 3
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+12029911 is already in [7950272, 12029911, 10264549], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, H.
+Applicable services: W1, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+10264549 is already in [7950272, 12029911, 10264549], keep searching.
+Dead end!
+
+Dead end!
+
+7950272 is already in [7950272, 12029911, 10264549], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 3***************** 
+State at this level: E, F, G, A, B, C.
+Applicable services: W1, W3, W8.
+Number of services : 3
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, J.
+Applicable services: W3, W8.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, H.
+Applicable services: W1, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+10264549 is already in [7950272, 12029911, 10264549], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, H.
+Applicable services: W1, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+7641750 is not in [7950272, 12029911, 10264549], returning solution.
+Backtrack: goal state has been reached!
+Backtrack with : [W7]
+Backtrack with : [W8, W7]
+Backtrack with : [W4, W8, W7]
+
+Solution #4 found with maxDepth=4: 
+W2, W4, W8, W7.
+Attempting search with maxDepth=4
+
+************Level 1***************** 
+State at this level: A, B, C.
+Applicable services: W1, W2.
+Number of services : 2
+
+************Level 2***************** 
+State at this level: A, B, C, J.
+Applicable services: W2.
+Number of services : 1
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, J.
+Applicable services: W3, W4.
+Number of services : 2
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+12029911 is already in [7950272, 12029911, 10264549, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, J.
+Applicable services: W3, W8.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 2***************** 
+State at this level: E, F, A, B, C.
+Applicable services: W1, W3, W4.
+Number of services : 3
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, J.
+Applicable services: W3, W4.
+Number of services : 2
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+12029911 is already in [7950272, 12029911, 10264549, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, J.
+Applicable services: W3, W8.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, H.
+Applicable services: W1, W4, W7.
+Number of services : 3
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+12029911 is already in [7950272, 12029911, 10264549, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, H.
+Applicable services: W1, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+10264549 is already in [7950272, 12029911, 10264549, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+7950272 is already in [7950272, 12029911, 10264549, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 3***************** 
+State at this level: E, F, G, A, B, C.
+Applicable services: W1, W3, W8.
+Number of services : 3
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, J.
+Applicable services: W3, W8.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, H.
+Applicable services: W1, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+10264549 is already in [7950272, 12029911, 10264549, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, H.
+Applicable services: W1, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+Dead end!
+
+Dead end!
+
+7641750 is already in [7950272, 12029911, 10264549, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Solution not possible with depth 4
+
+Attempting search with maxDepth=5
+
+************Level 1***************** 
+State at this level: A, B, C.
+Applicable services: W1, W2.
+Number of services : 2
+
+************Level 2***************** 
+State at this level: A, B, C, J.
+Applicable services: W2.
+Number of services : 1
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, J.
+Applicable services: W3, W4.
+Number of services : 2
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is not in [7950272, 12029911, 10264549, 7641750], returning solution.
+Backtrack: goal state has been reached!
+Backtrack with : [W7]
+Backtrack with : [W4, W7]
+Backtrack with : [W3, W4, W7]
+Backtrack with : [W2, W3, W4, W7]
+
+Solution #5 found with maxDepth=5: 
+W1, W2, W3, W4, W7.
+Attempting search with maxDepth=5
+
+************Level 1***************** 
+State at this level: A, B, C.
+Applicable services: W1, W2.
+Number of services : 2
+
+************Level 2***************** 
+State at this level: A, B, C, J.
+Applicable services: W2.
+Number of services : 1
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, J.
+Applicable services: W3, W4.
+Number of services : 2
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+12029911 is already in [7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, J.
+Applicable services: W3, W8.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+11721389 is not in [7950272, 12029911, 10264549, 14344188, 7641750], returning solution.
+Backtrack: goal state has been reached!
+Backtrack with : [W7]
+Backtrack with : [W8, W7]
+Backtrack with : [W4, W8, W7]
+Backtrack with : [W2, W4, W8, W7]
+
+Solution #6 found with maxDepth=5: 
+W1, W2, W4, W8, W7.
+Attempting search with maxDepth=5
+
+************Level 1***************** 
+State at this level: A, B, C.
+Applicable services: W1, W2.
+Number of services : 2
+
+************Level 2***************** 
+State at this level: A, B, C, J.
+Applicable services: W2.
+Number of services : 1
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, J.
+Applicable services: W3, W4.
+Number of services : 2
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+12029911 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, J.
+Applicable services: W3, W8.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+11721389 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 2***************** 
+State at this level: E, F, A, B, C.
+Applicable services: W1, W3, W4.
+Number of services : 3
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, J.
+Applicable services: W3, W4.
+Number of services : 2
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+12029911 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, J.
+Applicable services: W3, W8.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+11721389 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, H.
+Applicable services: W1, W4, W7.
+Number of services : 3
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+12029911 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, H.
+Applicable services: W1, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+10264549 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+7950272 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 3***************** 
+State at this level: E, F, G, A, B, C.
+Applicable services: W1, W3, W8.
+Number of services : 3
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, J.
+Applicable services: W3, W8.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+11721389 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, H.
+Applicable services: W1, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+10264549 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, H.
+Applicable services: W1, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+11721389 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+7641750 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Solution not possible with depth 5
+
+Attempting search with maxDepth=6
+
+************Level 1***************** 
+State at this level: A, B, C.
+Applicable services: W1, W2.
+Number of services : 2
+
+************Level 2***************** 
+State at this level: A, B, C, J.
+Applicable services: W2.
+Number of services : 1
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, J.
+Applicable services: W3, W4.
+Number of services : 2
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+12029911 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, J.
+Applicable services: W3, W8.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+11721389 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 2***************** 
+State at this level: E, F, A, B, C.
+Applicable services: W1, W3, W4.
+Number of services : 3
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, J.
+Applicable services: W3, W4.
+Number of services : 2
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+12029911 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, J.
+Applicable services: W3, W8.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+11721389 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, H.
+Applicable services: W1, W4, W7.
+Number of services : 3
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+12029911 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, H.
+Applicable services: W1, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+10264549 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+7950272 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 3***************** 
+State at this level: E, F, G, A, B, C.
+Applicable services: W1, W3, W8.
+Number of services : 3
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, J.
+Applicable services: W3, W8.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+11721389 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, H.
+Applicable services: W1, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+10264549 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, H.
+Applicable services: W1, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+11721389 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+7641750 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Solution not possible with depth 6
+
+Attempting search with maxDepth=7
+
+************Level 1***************** 
+State at this level: A, B, C.
+Applicable services: W1, W2.
+Number of services : 2
+
+************Level 2***************** 
+State at this level: A, B, C, J.
+Applicable services: W2.
+Number of services : 1
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, J.
+Applicable services: W3, W4.
+Number of services : 2
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+12029911 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, J.
+Applicable services: W3, W8.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+11721389 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 2***************** 
+State at this level: E, F, A, B, C.
+Applicable services: W1, W3, W4.
+Number of services : 3
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, J.
+Applicable services: W3, W4.
+Number of services : 2
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+12029911 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, J.
+Applicable services: W3, W8.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+11721389 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, H.
+Applicable services: W1, W4, W7.
+Number of services : 3
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+12029911 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, H.
+Applicable services: W1, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+10264549 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+7950272 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 3***************** 
+State at this level: E, F, G, A, B, C.
+Applicable services: W1, W3, W8.
+Number of services : 3
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, J.
+Applicable services: W3, W8.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+11721389 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, H.
+Applicable services: W1, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+10264549 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, H.
+Applicable services: W1, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+11721389 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+7641750 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Solution not possible with depth 7
+
+Attempting search with maxDepth=8
+
+************Level 1***************** 
+State at this level: A, B, C.
+Applicable services: W1, W2.
+Number of services : 2
+
+************Level 2***************** 
+State at this level: A, B, C, J.
+Applicable services: W2.
+Number of services : 1
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, J.
+Applicable services: W3, W4.
+Number of services : 2
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+12029911 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, J.
+Applicable services: W3, W8.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+11721389 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 2***************** 
+State at this level: E, F, A, B, C.
+Applicable services: W1, W3, W4.
+Number of services : 3
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, J.
+Applicable services: W3, W4.
+Number of services : 2
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+12029911 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, J.
+Applicable services: W3, W8.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+11721389 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, H.
+Applicable services: W1, W4, W7.
+Number of services : 3
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+12029911 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, H.
+Applicable services: W1, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+10264549 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+7950272 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 3***************** 
+State at this level: E, F, G, A, B, C.
+Applicable services: W1, W3, W8.
+Number of services : 3
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, J.
+Applicable services: W3, W8.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+11721389 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, H.
+Applicable services: W1, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+10264549 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, H.
+Applicable services: W1, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+11721389 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+7641750 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Solution not possible with depth 8
+
+Attempting search with maxDepth=9
+
+************Level 1***************** 
+State at this level: A, B, C.
+Applicable services: W1, W2.
+Number of services : 2
+
+************Level 2***************** 
+State at this level: A, B, C, J.
+Applicable services: W2.
+Number of services : 1
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, J.
+Applicable services: W3, W4.
+Number of services : 2
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+12029911 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, J.
+Applicable services: W3, W8.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+11721389 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 2***************** 
+State at this level: E, F, A, B, C.
+Applicable services: W1, W3, W4.
+Number of services : 3
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, J.
+Applicable services: W3, W4.
+Number of services : 2
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+12029911 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, J.
+Applicable services: W3, W8.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+11721389 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 3***************** 
+State at this level: E, F, A, B, C, H.
+Applicable services: W1, W4, W7.
+Number of services : 3
+
+************Level 4***************** 
+State at this level: E, F, A, B, C, H, J.
+Applicable services: W4, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+12029911 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, H.
+Applicable services: W1, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+10264549 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+7950272 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 3***************** 
+State at this level: E, F, G, A, B, C.
+Applicable services: W1, W3, W8.
+Number of services : 3
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, J.
+Applicable services: W3, W8.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+11721389 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, H.
+Applicable services: W1, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+14344188 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+10264549 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+************Level 4***************** 
+State at this level: E, F, G, A, B, C, H.
+Applicable services: W1, W7.
+Number of services : 2
+
+************Level 5***************** 
+State at this level: E, F, G, A, B, C, H, J.
+Applicable services: W7.
+Number of services : 1
+
+11721389 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+7641750 is already in [11721389, 7950272, 12029911, 10264549, 14344188, 7641750], keep searching.
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Dead end!
+
+Solution not possible with depth 9
+
+Solution not found. Please check your requirements or increase the depth limit.
+WARNING!
+THE FULL VERSION OF THE ALGORITHM IS IN ANOTHER PROJECT. 
+This project only runs the sample data from the project description. 
+Please run to the PlannerFull project to test the algorithm on the actual challenge files.
