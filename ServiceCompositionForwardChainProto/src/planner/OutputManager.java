@@ -17,7 +17,7 @@ public class OutputManager
 	static {
 	try
 	{
-		fileOut = new PrintWriter(new BufferedWriter(new FileWriter("C:\\Users\\Yuri\\Documents\\search.txt",true)));
+		fileOut = new PrintWriter(new BufferedWriter(new FileWriter("output.txt",true)));
 	}
 	catch (Exception e){}
 	}

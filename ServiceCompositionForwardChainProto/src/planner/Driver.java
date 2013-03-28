@@ -8,6 +8,7 @@ import auxparsers.ChallengeParser;
 
 import serviceparser.ServiceParser;
 
+import conceptparser.ConceptInstanceMap;
 import conceptparser.OwlParser;
 
 
@@ -35,6 +36,7 @@ public class Driver {
 		State initialState = new State();
 		State goalState = new State();
 		ArrayList<WebService> availableActions;
+		ConceptInstanceMap.reset();
 	
 		OutputManager.writeToFile("Loading challenge...");
 		cp.parse(challengeFile);
@@ -63,9 +65,16 @@ public class Driver {
 		
 		while (solutionHashes.size() < solutionsWanted)
 		{
+			
 			ArrayList<Action> route = null;
 			while (route == null && maxDepth <= Math.min(256, availableActions.size()+1))
 			{
+				if (!ForwardChainReasoningPlanner.active)
+				{
+					OutputManager.writeToFile("Search stopped by the user.");
+					return;
+				}
+				
 				OutputManager.writeToFile("Attempting search with maxDepth=" + maxDepth + "\n");
 				route = planner.plan(initialState, goalState, availableActions, 1, maxDepth, solutionHashes, 0, parallelFactor);
 			

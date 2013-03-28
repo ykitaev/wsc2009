@@ -15,6 +15,15 @@ public class ConceptInstanceMap
 		return map;
 	}
 	
+	public static void reset()
+	{
+		map.clear();
+		instanceMap.clear();
+		cache.clear();
+		System.gc();
+		Runtime.getRuntime().gc();
+	}
+	
 	public static HashMap<String, Instance> getInstanceMap() {
 		return instanceMap;
 	}

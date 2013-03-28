@@ -16,6 +16,8 @@ import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
+import conceptparser.ConceptInstanceMap;
+
 import planner.Driver;
 import planner.ForwardChainReasoningPlanner;
 import planner.OutputManager;
@@ -82,6 +84,7 @@ public class MainGUI extends JFrame
 	    initSolutionComboComponent();
 	    initActionListeners();
 	    initBindButtonsToActionListeners();
+	    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	  }
 	  
 	  /**
@@ -203,6 +206,9 @@ public class MainGUI extends JFrame
 			  int solutionsWanted = Integer.valueOf(mSolutionCombo.getSelectedItem().toString());
 			    int parallelism = Integer.valueOf(mListBranching.getSelectedItem().toString());
 			    if (solutionsWanted > 0
+			    		&& null != owlFile
+			    		&& null != challengeFile
+			    		&& null != serviceFile
 			    		&& parallelism > 0
 			    		&& owlFile.length() > 0
 			    		&& challengeFile.length() > 0
@@ -222,6 +228,7 @@ public class MainGUI extends JFrame
 			    {
 			    	OutputManager.writeToFile("Please Initialize all values first!");
 			    }
+			    ConceptInstanceMap.reset();
 		  }
 		  
 	  }
@@ -239,7 +246,7 @@ private String owlFile = "";
   protected JTextArea mTextOutput = new JTextArea(16,58);
   protected JScrollPane mTextScroll = new JScrollPane(mTextOutput);
   /* From 1 -> 10 */
-  protected JLabel mListLabel = new JLabel("Parallelism");
+  protected JLabel mListLabel = new JLabel("Parallelism: ");
   protected JComboBox<String> mListBranching = null;
   
   protected JLabel mSolutionLabel = new JLabel("Num of solutions:");
