@@ -155,6 +155,139 @@ public class ForwardChainReasoningPlanner
 		return null;
 	}
 	
+	public ArrayList<ParallelActionPack> planAdvanced(final State initialState
+			, State goalState
+			, ArrayList<? extends Action> availableActions
+			, int currentLevel
+			, int maxDepth
+			, HashSet<Long> knownSolutionHashes
+			, long partialSolutionHash
+			, int parallelFactor)
+	{
+		if (!active)
+			return null;
+		
+		// Base case - depth limiting part
+		if (currentLevel > maxDepth+1)
+			return null;
+		
+		// Include the semantically-equivalent concepts in the starting state
+		//initialState.expand();
+
+		// Base case - check if we have reached the goal
+		if (initialState.entails(goalState))
+		{
+			// Check if the solution found should be discarded as "known" or returned
+			if (knownSolutionHashes.contains(partialSolutionHash))
+			{
+				OutputManager.writeToFile(partialSolutionHash + " is already in " + knownSolutionHashes + ", keep searching.");
+				return null;
+			}
+			else
+			{
+				OutputManager.writeToFile(partialSolutionHash + " is not in " + knownSolutionHashes + ", returning solution.");
+				return new ArrayList<ParallelActionPack>(); // Empty
+			}
+		}
+		
+		// "result" will store the entire solution down the recursive road.
+		ArrayList<ParallelActionPack> result = new ArrayList<ParallelActionPack>();
+		// The set of applicable action at this level. Redundant, useless, and unavailable actions are discarded
+		final ArrayList<Action> applicable = new ArrayList<Action>();
+		
+		// Get the list of applicable actions
+		for (int i = 0; i < availableActions.size(); ++i)
+		{
+			if (initialState.hasPreconditionForExecution(availableActions.get(i))
+					&& !initialState.alreadyEntailsPostconditions(availableActions.get(i)))
+				applicable.add(availableActions.get(i));
+		}
+		
+		OutputManager.outputLevelStatus(currentLevel, initialState, goalState, applicable);
+		
+		// If no actions are possible, return failure.
+		if (0 == applicable.size())
+			return null;
+		
+		// Attempt recursive paths with all possible applicable actions, one at a time
+		for (int i = 0; i < applicable.size();)
+		{
+		
+			
+			State s = initialState.copy();
+			
+			int range = Math.min(parallelFactor, applicable.size()-i);
+			ArrayList<Action> parallelActions = new ArrayList<Action>(range);
+			
+			for (int j = 0; j < range; ++j)
+				parallelActions.add(applicable.get(i+j));
+			
+			// Apply action onto the state to get the state, which is the result of executing this action
+			for (Action action : parallelActions)
+			{
+				for (Proposition oneOutput : action.getPostConditions())
+				{
+					s.addWithExpansion(oneOutput);
+				}
+			}
+
+
+			// Determine which actions are available for the next level. 
+			// This set is equal to the all actions (not just applicable) minus the one 
+			// currently considered - because the assumption is that you cannot apply one action twice.
+			ArrayList<Action> availableForNextLevel = new ArrayList<Action>();
+			for (Action action : availableActions)
+				if (!parallelActions.contains(action))
+					availableForNextLevel.add(action);
+			
+			 // compute the partial hash
+			long hash = partialSolutionHash;
+			for (int k = 0; k < parallelActions.size(); ++k)
+			{
+				// Keep the position the same for hashing to tell the algorithm
+				// that switching actions around which are done in parallel
+				// does not give us a new solution and more search is required
+				Action action = parallelActions.get(k);
+				hash += action.getDomainLevelHash();
+			}
+			
+			// Recursive call. Gets the remaining part of the solution
+			ArrayList<ParallelActionPack> tail = planAdvanced(s
+								, goalState
+								, availableForNextLevel
+								, currentLevel + 1 // increment the depth for depth-limiting purposes
+								, maxDepth
+								, knownSolutionHashes 
+								, hash
+								, parallelFactor);
+			
+			// Let the user know if backtracking is possible, and if so - what is the tail contents
+			//OutputManager.backtrack(tail);
+			
+			// Check if the solution is valid, and if yes - return it to the caller
+			if (null != tail)
+			{
+				// Since the solution exists with the action in progress, it should be added as the head of the final solution
+				ParallelActionPack p = new ParallelActionPack(parallelActions.size());
+				for (Action a : parallelActions)
+				{
+					p.getActions().add(a);
+				}
+				result.add(p);
+				
+				// .. while the rest of the solution is the tail
+				for (int j = 0; j < tail.size(); ++j)
+					result.add(tail.get(j));
+				
+				return result;
+			}
+			i+= range;
+		}
+		
+		// If nothing has been found, return failure.
+		return null;
+	}
+	
 	/**
 	 * Computes the hash of a particular solution 
 	 * @param solution The ArrayList of actions
@@ -169,6 +302,14 @@ public class ForwardChainReasoningPlanner
 		return hash;
 	}
 	
+	public static long getSolutionHash(ArrayList<? extends ParallelActionPack> s)
+	{
+		long hash = 0;
+		for (ParallelActionPack p : s)
+			hash += p.hashCode();
+		return hash;
+	}
+
 	/**
 	 * Private method. Computes hash-code of one element, taking into account its position in the solution.
 	 * @param a Element

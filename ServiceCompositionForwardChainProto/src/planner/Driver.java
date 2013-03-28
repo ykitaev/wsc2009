@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 import presentation.MainGUI;
+import presentation.SolutionDraw;
 
 import auxparsers.ChallengeParser;
 
@@ -66,7 +67,7 @@ public class Driver {
 		while (solutionHashes.size() < solutionsWanted)
 		{
 			
-			ArrayList<Action> route = null;
+			ArrayList<ParallelActionPack> route = null;
 			while (route == null && maxDepth <= Math.min(256, availableActions.size()+1))
 			{
 				if (!ForwardChainReasoningPlanner.active)
@@ -76,7 +77,7 @@ public class Driver {
 				}
 				
 				OutputManager.writeToFile("Attempting search with maxDepth=" + maxDepth + "\n");
-				route = planner.plan(initialState, goalState, availableActions, 1, maxDepth, solutionHashes, 0, parallelFactor);
+				route = planner.planAdvanced(initialState, goalState, availableActions, 1, maxDepth, solutionHashes, 0, parallelFactor);
 			
 				if (null == route)
 				{
@@ -91,7 +92,7 @@ public class Driver {
 				return;
 			}
 			
-			long lastSolutionHash = ForwardChainReasoningPlanner.getSolutionHash(route, parallelFactor);
+			long lastSolutionHash = ForwardChainReasoningPlanner.getSolutionHash(route);
 			solutionHashes.add(lastSolutionHash);
 			
 			// Output the results:
@@ -103,10 +104,13 @@ public class Driver {
 				if (route.size()-1 == iter)
 					sln.append(".");
 				else
-					sln.append(", ");
+					sln.append(",\n");
 					
 			}
 			OutputManager.writeToFile(sln.toString());
+			
+			SolutionDraw sd = new SolutionDraw(route, initialState, goalState);
+			
 		}		
 	}
 

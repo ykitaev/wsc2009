@@ -46,4 +46,9 @@ public abstract class Action
 		return name;
 	}
 	
+	public long getDomainLevelHash()
+	{
+		return (hashCode()) % 4194304;
+	}
+	
 }

@@ -61,6 +61,12 @@ public class State
 		return true;
 	}
 	
+	public void applyActionWithExpansion(Action a)
+	{
+		for (Proposition p : a.getPostConditions())
+			addWithExpansion(p);
+	}
+	
 	/**
 	 * Clones the state
 	 * @return A copy of the object

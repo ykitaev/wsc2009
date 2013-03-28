@@ -4,7 +4,17 @@ import java.util.ArrayList;
 
 public class ParallelActionPack 
 {
-	private ArrayList<Action> actions = new ArrayList<Action>();
+	private ArrayList<Action> actions;
+	
+	public ParallelActionPack()
+	{
+		this(5); 
+	}
+	
+	public ParallelActionPack(int size)
+	{
+		actions = new ArrayList<Action>(size);
+	}
 	
 	public ArrayList<Action> getActions()
 	{
@@ -16,7 +26,7 @@ public class ParallelActionPack
 	{
 		int hash = 0;
 		for (Action a : actions)
-			hash += a.hashCode();
+			hash += a.getDomainLevelHash();
 		
 		return hash;
 	}
