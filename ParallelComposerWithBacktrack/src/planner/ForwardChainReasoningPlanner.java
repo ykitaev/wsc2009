@@ -208,13 +208,10 @@ public class ForwardChainReasoningPlanner
 					markActionEffectsAsAchieved(a, desiredState);
 				}
 			}
-					
-			
+
 			pack.setActions(actions);
 			
-			desiredState = State.union(computeMinumumStateToExecutePack(pack), desiredState);
-			
-			
+			desiredState = State.union(computeMinumumStateToExecutePack(pack), desiredState);		
 		}
 		return fatSolution;
 	}

@@ -199,13 +199,11 @@ public class MainGUI extends JFrame
 	  {
 		  public void run()
 		  {
-			  int solutionsWanted = Integer.valueOf(mSolutionCombo.getSelectedItem().toString());
-			    int parallelism = Integer.valueOf(mListBranching.getSelectedItem().toString());
+			  int solutionsWanted = 1;
 			    if (solutionsWanted > 0
 			    		&& null != owlFile
 			    		&& null != challengeFile
 			    		&& null != serviceFile
-			    		&& parallelism > 0
 			    		&& owlFile.length() > 0
 			    		&& challengeFile.length() > 0
 			    		&& serviceFile.length() > 0)
@@ -213,7 +211,7 @@ public class MainGUI extends JFrame
 			    	try
 			    	{
 			    		ForwardChainReasoningPlanner.active = true;
-			    		Driver.run(challengeFile, serviceFile, owlFile, solutionsWanted, parallelism);
+			    		Driver.run(challengeFile, serviceFile, owlFile, solutionsWanted, 1);
 			    	}
 			    	catch (Exception e)
 			    	{

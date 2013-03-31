@@ -41,8 +41,8 @@ public class SolutionDraw extends JDialog{
     	 int hoffset = 200;
     	 int voffset = 100;
     	 int steph = 110;
-    	 int stepv = 40;
-    	 int rech = 30;
+    	 int stepv = 20;
+    	 int rech = 15;
     	 int recw = 100;
     	   	 
     	 // Draw initial state

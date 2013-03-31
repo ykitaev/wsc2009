@@ -56,12 +56,11 @@ public class Driver {
 
 		OutputManager.outputStartInfo(initialState, goalState);
 		
-		int maxDepth = 1;
+		int maxDepth = 100;
 		
 		HashSet<Long> solutionHashes = new HashSet<Long>();
 		
 		int solutionsWanted = slnWanted;
-		int parallelFactor = prl;
 		int solutionsFound = 0;
 		
 		while (solutionHashes.size() < solutionsWanted)
@@ -116,8 +115,7 @@ public class Driver {
 			SolutionDraw sd = new SolutionDraw(route, initialState, goalState);
 			
 			ArrayList<ParallelActionPack> lean = ForwardChainReasoningPlanner.computeLeanSolution(initialState, goalState, route);
-			
-			
+
 			sd = new SolutionDraw(lean, initialState, goalState);
 			
 			sln = new StringBuilder();
@@ -135,6 +133,8 @@ public class Driver {
 			
 			isCorrect = ForwardChainReasoningPlanner.verifySolution(initialState, goalState, lean);
 			OutputManager.writeToFile("Verification of correctness : " + (isCorrect ? "Correct" : "Incorrect"));
+			
+			OutputManager.writeSolution(lean);
 		}		
 	}
 

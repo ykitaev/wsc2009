@@ -29,7 +29,6 @@ public class SolutionDraw extends JDialog{
           setLocationRelativeTo(null);
           setModal(true);
           setVisible(true);
-          setTitle("Solution Graph");
           
      }
 	

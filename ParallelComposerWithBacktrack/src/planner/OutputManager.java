@@ -11,13 +11,15 @@ import javax.swing.JTextArea;
 public class OutputManager 
 {
 	private static PrintWriter fileOut = null;
-	private static boolean mute = true;
+	private static PrintWriter fileResult = null;
+	private static boolean mute = false;
 	private static JTextArea textBox = null;
 	
 	static {
 	try
 	{
-		fileOut = new PrintWriter(new BufferedWriter(new FileWriter("output.txt",true)));
+		fileOut = new PrintWriter(new BufferedWriter(new FileWriter("log.txt",false)));
+		fileResult = new PrintWriter(new BufferedWriter(new FileWriter("result.txt",false)));
 	}
 	catch (Exception e){}
 	}
@@ -43,7 +45,7 @@ public class OutputManager
             if (itrState.hasNext())
             	sb.append(", ");
         }
-        sb.append(".\n");
+        sb.append("." + System.getProperty("line.separator"));
 		
 
 		sb.append("Applicable services: ");
@@ -54,10 +56,10 @@ public class OutputManager
             if (itr.hasNext())
             	sb.append(", ");
         }
-        sb.append(".\n");
+        sb.append("." + System.getProperty("line.separator"));
         sb.append("Number of services : ");
         sb.append(applicableActions.size());
-        sb.append("\n");
+        sb.append(System.getProperty("line.separator"));
 		writeToFile(sb.toString());
 	}
 	
@@ -72,7 +74,7 @@ public class OutputManager
             if (itr.hasNext())
             	sb.append(", ");
         }
-        sb.append(".\n");
+        sb.append("." + System.getProperty("line.separator"));
         
         sb.append("Goal concepts: ");
         
@@ -82,7 +84,7 @@ public class OutputManager
             if (itr.hasNext())
             	sb.append(", ");
         }
-        sb.append(".\n");
+        sb.append("." + System.getProperty("line.separator"));
 		
         writeToFile(sb.toString());
 	}
@@ -93,7 +95,7 @@ public class OutputManager
 			return;
 		
 		if (null == tail)
-			writeToFile("Dead end!\n");
+			writeToFile("Dead end!" + System.getProperty("line.separator"));
 		else if (tail.size() == 0)
 			writeToFile("Backtrack: goal state has been reached!");
 		else 
@@ -102,10 +104,28 @@ public class OutputManager
 	
 	public static void writeToFile(String s)
 	{
-		textBox.append(s + "\n");
-		//System.out.println(s);
+		textBox.append(s + System.getProperty("line.separator"));
+			System.out.println(s);
 		    fileOut.println(s);
 		    fileOut.flush();
 	}
-
+	
+	public static void writeSolution(ArrayList<ParallelActionPack> s)
+	{
+		StringBuilder sb = new StringBuilder();
+		for (int i = 0; i < s.size(); ++i)
+		{
+			ParallelActionPack p = s.get(i);
+			for (int j = 0; j < p.getActions().size(); ++j)
+			{
+				Action a = p.getActions().get(j);
+				sb.append(a.getName());
+				if (j + 1 < p.getActions().size())
+					sb.append(",");
+			}
+			sb.append(System.getProperty("line.separator"));
+		}
+		fileResult.print(sb.toString());
+		fileResult.close();
+	}
 }
