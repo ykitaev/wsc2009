@@ -232,10 +232,10 @@ private String serviceFile = "";
 private String owlFile = "";
   protected HashMap<String,ActionListener> mActionListeners = 
       new HashMap<String,ActionListener>();
-  protected JButton mButtonParseTaxonomy = new JButton("Parse Taxonomy");
-  protected JButton mButtonParseChallenge = new JButton("Parse Challenge");
+  protected JButton mButtonParseTaxonomy = new JButton("Parse Taxonomy (select file Taxonomy.owl)");
+  protected JButton mButtonParseChallenge = new JButton("Parse Challenge (select file problem.xml)");
   protected JButton mButtonDoIt = new JButton("[ RUN SEARCH ]");
-  protected JButton mButtonParseServices = new JButton("Parse Services");
+  protected JButton mButtonParseServices = new JButton("Parse Services (Select file sevices.xml)");
   protected JButton mButtonStop = new JButton("Stop");
   protected JTextArea mTextOutput = new JTextArea(16,58);
   protected JScrollPane mTextScroll = new JScrollPane(mTextOutput);
