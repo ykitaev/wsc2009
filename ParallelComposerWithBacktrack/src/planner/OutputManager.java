@@ -48,7 +48,7 @@ public class OutputManager
         sb.append("." + System.getProperty("line.separator"));
 		
 
-		sb.append("Applicable services: ");
+		sb.append("Services: ");
 		
 		Iterator<? extends Action> itr = applicableActions.iterator();
         while(itr.hasNext()){
@@ -60,12 +60,17 @@ public class OutputManager
         sb.append("Number of services : ");
         sb.append(applicableActions.size());
         sb.append(System.getProperty("line.separator"));
+        sb.append("Number of concepts : ");
+        sb.append(state.getState().size());
+        sb.append(System.getProperty("line.separator"));
 		writeToFile(sb.toString());
 	}
 	
 	public static  void outputStartInfo(State initialState, State goalState)
 	{		
 		StringBuilder sb = new StringBuilder();
+		sb.append("************ This forward planning graph is shown as follows************** ");
+		sb.append(System.getProperty("line.separator"));
 		sb.append("Input concepts: ");
 		
 		Iterator<? extends Proposition> itr = initialState.getState().iterator();

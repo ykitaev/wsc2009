@@ -21,6 +21,7 @@ public class SolutionDraw extends JDialog{
 
 	public SolutionDraw(ArrayList<ParallelActionPack> s,State initialState, State goalState)
 	{
+		super();
 		  solution = s;
 		  gs = goalState;
 		  is = initialState;
@@ -29,7 +30,8 @@ public class SolutionDraw extends JDialog{
           setLocationRelativeTo(null);
           setModal(true);
           setVisible(true);
-          
+          getContentPane().setBackground(Color.WHITE);
+          setBackground (Color.WHITE);
      }
 	
      public void paint(Graphics g)
