@@ -112,6 +112,7 @@ public class Driver {
 			boolean isCorrect = ForwardChainReasoningPlanner.verifySolution(initialState, goalState, route);
 			OutputManager.writeToFile("Verification of correctness : " + (isCorrect ? "Correct" : "Incorrect"));
 			
+			@SuppressWarnings("unused")
 			SolutionDraw sd = new SolutionDraw(route, initialState, goalState);
 			
 			ArrayList<ParallelActionPack> lean = ForwardChainReasoningPlanner.computeLeanSolution(initialState, goalState, route);
